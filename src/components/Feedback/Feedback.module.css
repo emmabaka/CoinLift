@@ -1,0 +1,43 @@
+.title {
+    padding-bottom: 55px;
+    padding-left: 45px;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 34px;
+    color: #24150f;
+  }
+  .wrapper {
+    min-height: 400px;
+    padding-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 65px;
+  }
+  .item {
+    max-width: 250px;
+    max-height: 290px;
+    padding: 25px;
+  }
+  .itemBottom {
+    align-self: self-end;
+    /* margin-bottom: 40px; */
+  }
+  .icon {
+    width: 30px;
+    height: 30px;
+  }
+  .text {
+    padding-top: 30px;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    color: #24150f;
+  }
+  .name {
+    padding-top: 30px;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    color: #454545;
+  }
+  

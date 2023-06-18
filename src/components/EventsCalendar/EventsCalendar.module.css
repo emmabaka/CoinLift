@@ -1,0 +1,36 @@
+.calendarContainer {
+  min-width: 561px;
+  min-height: 365px;
+  padding: 30px 40px 50px 40px;
+}
+.title {
+  font-weight: 700;
+  font-size: 27px;
+  line-height: 33px;
+  color: #24150f;
+}
+.table {
+  text-align: center;
+}
+.tableCoin {
+  padding-right: 15px;
+  /* padding-right: 30px;
+    padding-bottom: 30px;
+    padding-top: 30px; */
+  text-align: start;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  color: #24150f;
+}
+.tableDate {
+  padding: 30px;
+  font-size: 14px;
+  line-height: 17px;
+  color: #000000;
+  border-right: 0.5px solid #ebb49d;
+  border-left: 0.5px solid #ebb49d;
+}
+.head {
+  padding-left: 20px;
+}

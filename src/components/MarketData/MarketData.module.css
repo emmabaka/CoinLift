@@ -1,0 +1,30 @@
+.dataContainer {
+    padding: 30px;
+  }
+  .title {
+    padding-bottom: 40px;
+    font-weight: 700;
+    font-size: 27px;
+    line-height: 33px;
+    color: #24150f;
+  }
+  .table {
+    text-align: center;
+  }
+  .tableCol {
+    padding: 30px 40px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #24150f;
+  }
+  .tableColCoin {
+    padding: 30px 40px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    color: #24150f;
+  }
+  .border {
+    border-right: 0.5px solid #ebb49d;
+  }

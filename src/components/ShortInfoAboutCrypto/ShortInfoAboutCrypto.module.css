@@ -1,0 +1,41 @@
+.title {
+  padding-bottom: 30px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  color: #24150f;
+}
+.coin {
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 16px;
+  letter-spacing: -0.02em;
+  color: #24150f;
+}
+.coinImg {
+  display: block;
+}
+.per {
+  display: block;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 16px;
+  letter-spacing: -0.015em;
+  color: #20b47c;
+}
+.list {
+  display: flex;
+  justify-content: space-around;
+}
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  min-width: 160px;
+  padding: 14px;
+  background: #ffecdb;
+  box-shadow: 0px 0px 20px #f4f4f4;
+  border-radius: 15px;
+}
