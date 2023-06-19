@@ -7,7 +7,7 @@ const ShortInfoAboutCrypto = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8080/api/v1/cryptocurrency/percent-data")
+      .get("https://backend-coin-lift-production.up.railway.app/api/v1/cryptocurrency/percent-data")
       .then((res) => setInfo(res.data));
   }, []);
 

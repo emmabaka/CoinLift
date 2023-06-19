@@ -8,7 +8,7 @@ const LatestNews = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8080/api/v1/cryptocurrency/news")
+      .get("https://backend-coin-lift-production.up.railway.app/api/v1/cryptocurrency/news")
       .then((res) => {
         if (res.data.length > 10) {
           const slicedNews = res.data.slice(0, 10);

@@ -1,3 +1,18 @@
+.learn {
+  position: relative;
+}
+.learn::after {
+  content: "";
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  left: 102px;
+  top: 215.94px;
+
+  background: #eb703c;
+  filter: blur(75px);
+  transform: matrix(0.94, -0.34, 0.34, 0.94, 0, 0);
+}
 .learnContainer {
   max-width: 561px;
   min-height: 365px;

@@ -1,5 +1,10 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import {
+  roundToTreeNumbers,
+  roundAndAddComma,
+  addCommasToNumber,
+} from "../../helpers/numbersOperations";
 import css from "./MarketData.module.css";
 
 const MarketData = () => {
@@ -7,7 +12,9 @@ const MarketData = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8080/api/v1/cryptocurrency/all-data")
+      .get(
+        "https://backend-coin-lift-production.up.railway.app/api/v1/cryptocurrency/all-data"
+      )
       .then((res) => setData(res.data));
   }, []);
 
@@ -18,43 +25,45 @@ const MarketData = () => {
           <h2 className={css.title}>Market data</h2>
           <table className={css.table}>
             <thead>
-              <th></th>
-              <th>Cost</th>
-              <th>1H %</th>
-              <th>1D %</th>
-              <th>1W %</th>
-              <th>Market capitalization</th>
-              <th>Volume (1D)</th>
-              <th>Circulating supply</th>
+              <tr>
+                <th>{""}</th>
+                <th>Cost</th>
+                <th>1H %</th>
+                <th>1D %</th>
+                <th>1W %</th>
+                <th>Market capitalization</th>
+                <th>Volume (1D)</th>
+                <th>Circulating supply</th>
+              </tr>
             </thead>
             <tbody>
               {data.map((item, i) => (
-                <tr key={i}>
+                <tr key={i} className={css.border}>
                   <td className={`${css.tableColCoin} ${css.border}`}>
                     <img src={item.imageUrl} alt={item.name} width={32} />
-                    <span>{item.name}</span>
+                    <span>{item.symbol}</span>
                   </td>
                   <td
                     className={`${css.tableCol} ${css.border}`}
-                  >{`$${item.price}`}</td>
+                  >{`$${roundAndAddComma(item.price)}`}</td>
                   <td
                     className={`${css.tableCol} ${css.border}`}
-                  >{`${item.percentChange1H}%`}</td>
+                  >{`${roundToTreeNumbers(item.percentChange1H)}%`}</td>
                   <td
                     className={`${css.tableCol} ${css.border}`}
-                  >{`${item.percentChange1D}%`}</td>
+                  >{`${roundToTreeNumbers(item.percentChange1H)}%`}</td>
                   <td
                     className={`${css.tableCol} ${css.border}`}
-                  >{`${item.percentChange1W}%`}</td>
+                  >{`${roundToTreeNumbers(item.percentChange1W)}%`}</td>
                   <td
                     className={`${css.tableCol} ${css.border}`}
-                  >{`$${item.marketCap}`}</td>
+                  >{`$${roundAndAddComma(item.marketCap)}`}</td>
                   <td
                     className={`${css.tableCol} ${css.border}`}
-                  >{`$${item.volumeUSD}`}</td>
-                  <td
-                    className={css.tableCol}
-                  >{`${item.circulatingSupply}`}</td>
+                  >{`$${addCommasToNumber(item.volumeUSD)}`}</td>
+                  <td className={css.tableCol}>{`${addCommasToNumber(
+                    item.circulatingSupply
+                  )} ${item.symbol}`}</td>
                 </tr>
               ))}
             </tbody>
