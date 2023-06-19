@@ -2,6 +2,9 @@
   padding: 30px;
 }
 .title {
+  display: flex;
+  align-items: center;
+  gap: 15px;
   padding-bottom: 40px;
   font-weight: 700;
   font-size: 27px;

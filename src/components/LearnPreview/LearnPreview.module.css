@@ -37,8 +37,10 @@
 .link {
   font-size: 20px;
   line-height: 24px;
-
   color: #24150f;
+}
+.arrow {
+  margin-left: 25px;
 }
 .image {
   max-height: 280px;

@@ -5,6 +5,8 @@ import {
   roundAndAddComma,
   addCommasToNumber,
 } from "../../helpers/numbersOperations";
+import { Link } from "react-router-dom";
+import arrow from "../../assets/title-arrow.svg";
 import css from "./MarketData.module.css";
 
 const MarketData = () => {
@@ -22,7 +24,12 @@ const MarketData = () => {
     <section>
       <div className="container">
         <div className={`${css.dataContainer} box`}>
-          <h2 className={css.title}>Market data</h2>
+          <Link to="/reading">
+            <h2 className={css.title}>
+              Market data <img src={arrow} alt="arrow" width="50" />
+            </h2>
+          </Link>
+
           <table className={css.table}>
             <thead>
               <tr>

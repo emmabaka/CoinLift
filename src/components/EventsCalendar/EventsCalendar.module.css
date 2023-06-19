@@ -9,6 +9,10 @@
   line-height: 33px;
   color: #24150f;
 }
+.defaultText {
+  text-align: center;
+  padding-top: 100px;
+}
 .table {
   text-align: center;
 }

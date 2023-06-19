@@ -17,7 +17,7 @@ const EventsCalendar = () => {
     <div className={`${css.calendarContainer} box`}>
       <h2 className={css.title}>Calendar</h2>
       {events.length === 0 ? (
-        <p>There are no events in the near future </p>
+        <p className={css.defaultText}>There are no events in the near future </p>
       ) : (
         <table className={css.table}>
           <thead>
