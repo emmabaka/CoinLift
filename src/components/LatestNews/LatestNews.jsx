@@ -36,7 +36,7 @@ const LatestNews = () => {
           <div className={css.newsWrap}>
             {news.map((item, i) => (
               <a href={item.url} target="blank" key={i} className={css.item}>
-                <img src={item.thumbnail} alt="News photo" height="105" />
+                <img src={item.thumbnail} alt="News photo" />
                 <h3 className={css.itemTitle}>{cropText(item.title, 40)}</h3>
                 <p className={css.itemText}>{cropText(item.description, 70)}</p>
               </a>

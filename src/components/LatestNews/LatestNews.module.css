@@ -64,6 +64,11 @@
   box-shadow: 0px 0px 35px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
 }
+.item img {
+  height: 100px;
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+}
 .itemTitle {
   padding: 15px;
   font-weight: 600;
