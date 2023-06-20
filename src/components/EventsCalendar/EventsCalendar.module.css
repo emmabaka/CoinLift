@@ -1,7 +1,34 @@
 .calendarContainer {
+  position: relative;
   min-width: 561px;
   min-height: 365px;
   padding: 30px 40px 50px 40px;
+}
+.calendarContainer::before {
+  content: "";
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  left: 80px;
+  bottom: 100px;
+  z-index: -1;
+
+  background: #eb703c;
+  filter: blur(75px);
+  transform: matrix(0.94, -0.34, 0.34, 0.94, 0, 0);
+}
+.calendarContainer::after {
+  content: "";
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  right: 114px;
+  top: 100px;
+  z-index: -1;
+
+  background: #eb703c;
+  filter: blur(75px);
+  transform: matrix(0.94, -0.34, 0.34, 0.94, 0, 0);
 }
 .title {
   font-weight: 700;

@@ -17,7 +17,9 @@ const EventsCalendar = () => {
     <div className={`${css.calendarContainer} box`}>
       <h2 className={css.title}>Calendar</h2>
       {events.length === 0 ? (
-        <p className={css.defaultText}>There are no events in the near future </p>
+        <p className={css.defaultText}>
+          There are no events in the near future{" "}
+        </p>
       ) : (
         <table className={css.table}>
           <thead>
@@ -26,14 +28,15 @@ const EventsCalendar = () => {
             <th className={css.head}>Conference</th>
           </thead>
           <tbody>
-            <tr>
-              <td className={css.tableCoin}>
-                <img src="./logo.png" width="38" alt="" />
-                Sola-X
-              </td>
-              <td className={css.tableDate}>02.05.2023</td>
-              <td className={css.tableIcon}>x</td>
-            </tr>
+            {events.map((item, i) => (
+              <tr key={i}>
+                <td className={css.tableCoin}>{item.cryptoName}</td>
+                <td className={css.tableDate}>{item.date}</td>
+                <td className={css.tableIcon}>
+                  {item.is_conference ? "yes" : "no"}
+                </td>
+              </tr>
+            ))}
           </tbody>
         </table>
       )}

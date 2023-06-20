@@ -1,3 +1,4 @@
+import CommunityTradeIdeas from "../../components/CommunityTradeIdeas/CommunityTradeIdeas";
 import Feedback from "../../components/Feedback/Feedback";
 import LatestNews from "../../components/LatestNews/LatestNews";
 import LearnAndCalendarSection from "../../components/LearnAndCalendarSection/LearnAndCalendarSection";
@@ -11,6 +12,7 @@ const Home = () => {
       <LatestNews />
       <LearnAndCalendarSection />
       <MarketData />
+      <CommunityTradeIdeas />
       <Feedback />
     </>
   );

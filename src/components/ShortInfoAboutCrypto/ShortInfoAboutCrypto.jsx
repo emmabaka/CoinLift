@@ -1,5 +1,9 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import {
+  isPositive,
+  normalizePerForShortInfo,
+} from "../../helpers/numbersOperations";
 import css from "./ShortInfoAboutCrypto.module.css";
 
 const ShortInfoAboutCrypto = () => {
@@ -7,7 +11,9 @@ const ShortInfoAboutCrypto = () => {
 
   useEffect(() => {
     axios
-      .get("https://backend-coin-lift-production.up.railway.app/api/v1/cryptocurrency/percent-data")
+      .get(
+        "https://backend-coin-lift-production.up.railway.app/api/v1/cryptocurrency/percent-data"
+      )
       .then((res) => setInfo(res.data));
   }, []);
 
@@ -27,7 +33,15 @@ const ShortInfoAboutCrypto = () => {
                 />
                 <span className={css.coin}>
                   {item.name}
-                  <span className={css.per}>{item.percentChange24h}</span>
+                  {isPositive(item.percentChange24h) ? (
+                    <span className={`${css.per} ${css.perPositive}`}>
+                      {"+" + normalizePerForShortInfo(item.percentChange24h)}
+                    </span>
+                  ) : (
+                    <span className={`${css.per} ${css.perNegative}`}>
+                      {normalizePerForShortInfo(item.percentChange24h)}
+                    </span>
+                  )}
                 </span>
               </li>
             ))}

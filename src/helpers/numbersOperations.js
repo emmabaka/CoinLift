@@ -33,6 +33,25 @@ export function roundAndAddComma(value) {
 }
 
 export function addCommasToNumber(number) {
-    return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
+export function isPositive(number) {
+  const value = String(number);
+  if (value.includes("-")) {
+    return false;
+  } else {
+    return true;
+  }
+}
+
+export function normalizePerForShortInfo(number) {
+  let value = String(number).split("");
+
+  if (value.length === 1) {
+    const end = [".", "0", "0"];
+    value = value.concat(end);
   }
   
+  return value.join("");
+}
