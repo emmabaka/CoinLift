@@ -15,11 +15,16 @@
   text-align: center;
 }
 .tableCol {
-  padding: 30px 30px;
+  padding: 30px 25px;
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
   color: #24150f;
+}
+.dataWrap {
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 .tableColCoin {
   display: flex;
@@ -31,6 +36,15 @@
   line-height: 20px;
   color: #24150f;
 }
-.border {
-  border-right: 0.5px solid #ebb49d;
+.line {
+  position: relative;
+}
+.line::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0.5px;
+  height: 1050px;
+  background-color: #ebb49d;
 }

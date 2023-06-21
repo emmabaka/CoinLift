@@ -2,9 +2,9 @@ export function roundToTreeNumbers(value) {
   const numberToString = String(value);
   const array = numberToString.split("");
 
-  if (array.includes("-") || array.includes("+")) {
+  if (array.includes("-")) {
     if (array[5] > 5) array[4]++;
-    const spliced = array.splice(0, 5);
+    const spliced = array.splice(1, 5);
     return spliced.join("");
   } else {
     if (array[4] > 5) array[3]++;
@@ -52,6 +52,6 @@ export function normalizePerForShortInfo(number) {
     const end = [".", "0", "0"];
     value = value.concat(end);
   }
-  
+
   return value.join("");
 }

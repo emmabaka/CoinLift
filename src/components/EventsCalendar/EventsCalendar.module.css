@@ -48,6 +48,7 @@
   /* padding-right: 30px;
     padding-bottom: 30px;
     padding-top: 30px; */
+  padding-right: 30px;
   text-align: start;
   font-weight: 600;
   font-size: 16px;
@@ -59,9 +60,20 @@
   font-size: 14px;
   line-height: 17px;
   color: #000000;
-  border-right: 0.5px solid #ebb49d;
-  border-left: 0.5px solid #ebb49d;
 }
+
 .head {
   padding-left: 20px;
+}
+.line {
+  position: relative;
+}
+.line::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0.5px;
+  height: 250px;
+  background-color: #ebb49d;
 }
