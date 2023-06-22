@@ -10,7 +10,7 @@ const HeroHeaderContent = () => {
           <span className={css.titleAccent}>crypto website</span>
         </h1>
         <p className={css.text}>
-          Your gateway to the decentralized future.
+          Your gateway to the decentralized future.{" "}
           <span className={css.textAccent}>And the future is now.</span>
         </p>
       </div>
