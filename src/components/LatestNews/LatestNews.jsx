@@ -18,7 +18,6 @@ const LatestNews = () => {
           const slicedNews = res.data.slice(0, 10);
           setNews(slicedNews);
         }
-        console.log(res.data);
         setNews(res.data);
       });
   }, []);

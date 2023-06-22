@@ -55,6 +55,15 @@
   line-height: 20px;
   color: #24150f;
 }
+.tableCoinWrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.tableCoinWrap img {
+  max-width: 38px;
+  max-height: 38px;
+}
 .tableDate {
   padding: 30px;
   font-size: 14px;
