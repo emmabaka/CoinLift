@@ -25,14 +25,25 @@ const EventsCalendar = () => {
       ) : (
         <table className={css.table}>
           <thead>
-            <th className={css.line}></th>
-            <th className={css.line}>Date</th>
-            <th className={css.head}>Conference</th>
+            <tr>
+              <th className={css.line}></th>
+              <th className={css.line}>Date</th>
+              <th className={css.head}>Conference</th>
+            </tr>
           </thead>
           <tbody>
             {events.map((item, i) => (
               <tr key={i}>
-                <td className={css.tableCoin}>{item.cryptoName}</td>
+                <td className={css.tableCoin}>
+                  <div className={css.tableCoinWrap}>
+                    <img
+                      src={item.imageLink}
+                  
+                      alt={item.cryptoName}
+                    />
+                    {item.cryptoName}
+                  </div>
+                </td>
                 <td className={css.tableDate}>{item.date}</td>
                 <td className={css.tableIcon}>
                   {item.is_conference ? (

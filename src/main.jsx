@@ -7,7 +7,7 @@ import "normalize.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/CoinLift">
       <App />
     </BrowserRouter>
   </React.StrictMode>

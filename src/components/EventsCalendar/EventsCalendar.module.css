@@ -45,15 +45,21 @@
 }
 .tableCoin {
   padding-right: 15px;
-  /* padding-right: 30px;
-    padding-bottom: 30px;
-    padding-top: 30px; */
   padding-right: 30px;
   text-align: start;
   font-weight: 600;
   font-size: 16px;
   line-height: 20px;
   color: #24150f;
+}
+.tableCoinWrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.tableCoinWrap img {
+  max-width: 38px;
+  max-height: 38px;
 }
 .tableDate {
   padding: 30px;

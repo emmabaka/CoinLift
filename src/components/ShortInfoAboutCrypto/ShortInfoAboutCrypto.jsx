@@ -35,11 +35,13 @@ const ShortInfoAboutCrypto = () => {
                   {item.name}
                   {isPositive(item.percentChange24h) ? (
                     <span className={`${css.per} ${css.perPositive}`}>
-                      {"+" + normalizePerForShortInfo(item.percentChange24h)}
+                      {"+" +
+                        normalizePerForShortInfo(item.percentChange24h) +
+                        "%"}
                     </span>
                   ) : (
                     <span className={`${css.per} ${css.perNegative}`}>
-                      {normalizePerForShortInfo(item.percentChange24h)}
+                      {normalizePerForShortInfo(item.percentChange24h) + "%"}
                     </span>
                   )}
                 </span>
