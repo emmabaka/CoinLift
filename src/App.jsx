@@ -12,6 +12,7 @@ import MyPage from "./pages/Community/MyPage";
 import Notifications from "./pages/Community/Notifications";
 import Liked from "./pages/Community/Liked";
 import Rules from "./pages/Community/Rules";
+import Article from "./pages/Article/Article";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path="/learn" element={<Learn />} />
           <Route path="/community" element={<CommunityLayout />}>
             <Route index element={<Feed />} />
+            <Route path="/community/:postId" element={<Article />} />
             <Route path="profile" element={<MyPage />} />
             <Route path="notifications" element={<Notifications />} />
             <Route path="liked" element={<Liked />} />
