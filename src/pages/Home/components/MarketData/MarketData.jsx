@@ -1,26 +1,22 @@
-import axios from "axios";
 import { useEffect, useState } from "react";
 import {
   roundToTreeNumbers,
   roundAndAddComma,
   addCommasToNumber,
   isPositive,
-} from "../../helpers/numbersOperations";
+} from "../../../../helpers/numbersOperations";
+import { getCryptocurrencyData } from "../../../../api/getCryptocurrencyData";
 import { Link } from "react-router-dom";
-import positive from "../../assets/positive.svg";
-import negative from "../../assets/negative.svg";
-import arrow from "../../assets/title-arrow.svg";
+import positive from "../../../../assets/positive.svg";
+import negative from "../../../../assets/negative.svg";
+import arrow from "../../../../assets/title-arrow.svg";
 import css from "./MarketData.module.css";
 
 const MarketData = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    axios
-      .get(
-        "https://backend-coin-lift-production.up.railway.app/api/v1/cryptocurrency/all-data"
-      )
-      .then((res) => setData(res.data));
+    getCryptocurrencyData("all-data").then((res) => setData(res.data));
   }, []);
 
   return (

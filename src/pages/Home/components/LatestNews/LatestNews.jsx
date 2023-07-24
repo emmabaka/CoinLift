@@ -1,25 +1,21 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
 import { Link } from "react-router-dom";
-import { cropText } from "../../helpers/textOperations";
-import arrow from "../../assets/title-arrow.svg";
+import { cropText } from "../../../../helpers/textOperations";
+import arrow from "../../../../assets/title-arrow.svg";
 import css from "./LatestNews.module.css";
+import { getCryptocurrencyData } from "../../../../api/getCryptocurrencyData";
 
 const LatestNews = () => {
   const [news, setNews] = useState([]);
 
   useEffect(() => {
-    axios
-      .get(
-        "https://backend-coin-lift-production.up.railway.app/api/v1/cryptocurrency/news"
-      )
-      .then((res) => {
-        if (res.data.length > 10) {
-          const slicedNews = res.data.slice(0, 10);
-          setNews(slicedNews);
-        }
-        setNews(res.data);
-      });
+    getCryptocurrencyData("news").then((res) => {
+      if (res.data.length > 10) {
+        const slicedNews = res.data.slice(0, 10);
+        setNews(slicedNews);
+      }
+      setNews(res.data);
+    });
   }, []);
 
   return (

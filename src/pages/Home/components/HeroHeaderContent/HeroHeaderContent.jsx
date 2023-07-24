@@ -1,4 +1,4 @@
-import heroContentImg from "../../assets/heroContentImg.png";
+import heroContentImg from "../../../../assets/heroContentImg.png";
 import css from "./HeroHeaderContent.module.css";
 
 const HeroHeaderContent = () => {

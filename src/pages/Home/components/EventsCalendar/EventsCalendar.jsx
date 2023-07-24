@@ -1,18 +1,14 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
-import yes from "../../assets/done.svg";
-import no from "../../assets/close.svg";
+import { getCryptocurrencyData } from "../../../../api/getCryptocurrencyData";
+import yes from "../../../../assets/done.svg";
+import no from "../../../../assets/close.svg";
 import css from "./EventsCalendar.module.css";
 
 const EventsCalendar = () => {
   const [events, setEvents] = useState([]);
 
   useEffect(() => {
-    axios
-      .get(
-        "https://backend-coin-lift-production.up.railway.app/api/v1/cryptocurrency/events"
-      )
-      .then((res) => setEvents(res.data));
+    getCryptocurrencyData("events").then((res) => setEvents(res.data));
   }, []);
 
   return (
@@ -36,11 +32,7 @@ const EventsCalendar = () => {
               <tr key={i}>
                 <td className={css.tableCoin}>
                   <div className={css.tableCoinWrap}>
-                    <img
-                      src={item.imageLink}
-                  
-                      alt={item.cryptoName}
-                    />
+                    <img src={item.imageLink} alt={item.cryptoName} />
                     {item.cryptoName}
                   </div>
                 </td>

@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import arrow from "../../assets/title-arrow.svg";
-import comments from "../../assets/comments.png";
+import arrow from "../../../../assets/title-arrow.svg";
+import comments from "../../../../assets/comments.png";
 import css from "./CommunityTradeIdeas.module.css";
 
 const CommunityTradeIdeas = () => {
@@ -15,6 +15,7 @@ const CommunityTradeIdeas = () => {
       )
       .then((res) => setPosts(res.data));
   }, []);
+  
   return (
     <section>
       <div className="container">

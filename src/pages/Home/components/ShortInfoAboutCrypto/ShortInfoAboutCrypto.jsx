@@ -1,20 +1,16 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
 import {
   isPositive,
   normalizePerForShortInfo,
-} from "../../helpers/numbersOperations";
+} from "../../../../helpers/numbersOperations";
+import { getCryptocurrencyData } from "../../../../api/getCryptocurrencyData";
 import css from "./ShortInfoAboutCrypto.module.css";
 
 const ShortInfoAboutCrypto = () => {
   const [info, setInfo] = useState([]);
 
   useEffect(() => {
-    axios
-      .get(
-        "https://backend-coin-lift-production.up.railway.app/api/v1/cryptocurrency/percent-data"
-      )
-      .then((res) => setInfo(res.data));
+    getCryptocurrencyData("percent-data").then((res) => setInfo(res.data));
   }, []);
 
   return (

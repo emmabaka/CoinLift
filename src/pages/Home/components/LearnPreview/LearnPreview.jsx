@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import learn from "../../assets/learn.png";
-import arrow from "../../assets/learn-arrow.svg";
+import learn from "../../../../assets/learn.png";
+import arrow from "../../../../assets/learn-arrow.svg";
 import css from "./LearnPreview.module.css";
 
 const LearnPreview = () => {
